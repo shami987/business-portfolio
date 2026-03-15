@@ -41,35 +41,39 @@ export const SERVICES: Service[] = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    name: 'EduStream Pro',
-    client: 'Global Education Group',
-    description: 'A comprehensive school management system with real-time tracking.',
+    name: 'Smart Local Commerce Platform',
+    client: '',
+    description: 'A digital system that connects local businesses, customers, and service providers through technology to enable buying and selling within a specific community or city.',
     technologies: ['React', 'Node.js', 'PostgreSQL'],
-    image: '/images/local-commerce.png'
+    image: '/images/local-commerce.png',
+    link: 'https://smart-local-commerce-8th6.vercel.app/'
   },
   {
     id: '2',
-    name: 'StockFlow',
-    client: 'Retail Solutions Inc.',
-    description: 'Advanced stock management system with automated reordering.',
-    technologies: ['TypeScript', 'Next.js', 'Tailwind'],
-    image: 'https://picsum.photos/seed/stock/800/600'
+    name: 'Personal Finance Tracker',
+    client: '',
+    description: 'This is a system that helps users monitor income, expenses, and savings to manage their money effectively.',
+    technologies: ['TypeScript', 'Next.js', 'Tailwind', 'PostgreSQL'],
+    image: '/images/finance-tracker.png',
+    link: 'https://finance-tracker-iota-neon.vercel.app/'
+
   },
   {
     id: '3',
-    name: 'VogueStore',
-    client: 'Fashion Forward',
-    description: 'High-end e-commerce platform with AR try-on features.',
+    name: 'Online Food Ordering System',
+    client: '',
+    description: 'This is a digital platform that allows customers to browse restaurant menus, place food orders, and pay online for delivery or pickup.',
     technologies: ['React', 'Shopify', 'Three.js'],
-    image: 'https://picsum.photos/seed/fashion/800/600'
+    image: '/images/food-ordering.png',
+    link: 'https://my-restaurant-seven.vercel.app/'
   },
   {
     id: '4',
-    name: 'TechInsights',
-    client: 'Self-Project',
-    description: 'A modern blog platform for technology enthusiasts.',
+    name: 'FertiTerra',
+    client: 'in progress ...',
+    description: 'The FertiTerra App is a mobile application designed to help people track their fertility, menstrual cycle, and reproductive health using digital tools and AI insights.',
     technologies: ['React', 'Sanity.io', 'Tailwind'],
-    image: 'https://picsum.photos/seed/blog/800/600'
+    image: '/images/fertiterra.gif'
   }
 ];
 

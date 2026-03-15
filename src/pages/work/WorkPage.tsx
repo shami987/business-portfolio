@@ -1,48 +1,56 @@
 import { motion } from 'motion/react';
+import { ArrowUpRight } from 'lucide-react';
 import { PROJECTS } from '../../lib/constants';
 import './work.styles.css';
 
 export default function WorkPage() {
   return (
-    <section id="work" className="py-24 bg-white">
+    <section id="work" className="py-24 bg-gradient-to-br from-indigo-950 via-indigo-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
-          <div>
-            <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">Our Work</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Featured Projects</h2>
-          </div>
-          <p className="text-gray-600 max-w-md text-base sm:text-lg">
-            A glimpse into the digital solutions we've crafted for our diverse range of clients.
-          </p>
+        <div className="mb-16">
+          <span className="text-indigo-500 font-bold tracking-wider uppercase text-sm">Our Work</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">Featured Projects</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="flex flex-col divide-y divide-indigo-800/40">
           {PROJECTS.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl bg-gray-900"
+              className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} gap-8 sm:gap-12 py-16 items-center`}
             >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full aspect-video object-cover opacity-80 group-hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 sm:p-8 flex flex-col justify-end">
-                <span className="text-indigo-400 font-medium text-sm mb-2">{project.client}</span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">{project.name}</h3>
-                <p className="text-gray-300 mb-4 line-clamp-2">{project.description}</p>
+              {/* Image */}
+              <div className="w-full md:w-1/2 overflow-hidden rounded-2xl">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full aspect-video object-cover hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              {/* Details */}
+              <div className="w-full md:w-1/2 flex flex-col gap-5">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">{project.name}</h3>
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">{project.description}</p>
+                <p className="text-indigo-400 font-medium text-sm">/ {project.client}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="bg-white/10 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full border border-white/20">
+                    <span key={tech} className="bg-indigo-800/40 border border-indigo-700/50 text-indigo-200 text-xs px-3 py-1 rounded-full">
                       {tech}
                     </span>
                   ))}
                 </div>
+                <a
+                  href={project.link || '#'}
+                  target={project.link ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
+                  className="mt-2 self-start flex items-center gap-2 bg-indigo-800/50 hover:bg-indigo-600 text-white text-sm font-semibold px-5 py-3 rounded-xl border border-indigo-700/50 transition-colors duration-300">
+                  View case study <ArrowUpRight size={16} />
+                </a>
               </div>
             </motion.div>
           ))}
