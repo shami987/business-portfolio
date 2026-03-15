@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
+  { name: 'About', href: '#about' },
   { name: 'Work', href: '#work' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'Contact', href: '#contact' },
@@ -20,6 +20,14 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleMobileNav = (href: string) => {
+    setIsOpen(false);
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  };
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
@@ -75,7 +83,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { e.preventDefault(); handleMobileNav(link.href); }}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
                 >
                   {link.name}
@@ -83,7 +91,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => { e.preventDefault(); handleMobileNav('#contact'); }}
                 className="block w-full text-center bg-indigo-600 text-white px-3 py-3 rounded-md text-base font-medium"
               >
                 Get a Quote
