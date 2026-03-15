@@ -60,19 +60,19 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    name: 'Online Food Ordering System',
+    name: 'Gisozi Carpentry',
     client: '',
-    description: 'This is a digital platform that allows customers to browse restaurant menus, place food orders, and pay online for delivery or pickup.',
-    technologies: ['React', 'Shopify', 'Three.js'],
-    image: '/images/food-ordering.png',
-    link: 'https://my-restaurant-seven.vercel.app/'
+    description: 'This is a website that shows the woodwork services offered by a carpenter or carpentry company.',
+    technologies: ['TypeScript', 'Next.js', 'Tailwind', 'PostgreSQL'],
+    image: '/images/carpentry.png',
+    link: 'https://carpentry-eight.vercel.app/'
   },
   {
     id: '4',
     name: 'FertiTerra',
     client: 'in progress ...',
     description: 'The FertiTerra App is a mobile application designed to help people track their fertility, menstrual cycle, and reproductive health using digital tools and AI insights.',
-    technologies: ['React', 'Sanity.io', 'Tailwind'],
+    technologies: ['TypeScript', 'Next.js', 'Tailwind', 'PostgreSQL'],
     image: '/images/fertiterra.gif'
   }
 ];
