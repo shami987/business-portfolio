@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     client: 'Global Education Group',
     description: 'A comprehensive school management system with real-time tracking.',
     technologies: ['React', 'Node.js', 'PostgreSQL'],
-    image: 'https://picsum.photos/seed/edu/800/600'
+    image: '/images/local-commerce.png'
   },
   {
     id: '2',
@@ -76,19 +76,19 @@ export const PROJECTS: Project[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'Sarah Johnson',
+    name: 'Sarah Gatesi',
     role: 'CEO',
     company: 'TechStart',
     content: 'NovaSoft built a professional website for our company and delivered on time. Their attention to detail is unmatched.',
-    avatar: 'https://i.pravatar.cc/150?u=sarah'
+    avatar: 'https://www.refinery29.com/images/11776683.jpg'
   },
   {
     id: '2',
-    name: 'Michael Chen',
+    name: 'Sandra Mizero',
     role: 'Founder',
     company: 'EduLearn',
     content: 'The custom dashboard they developed has transformed how we manage our student data. Highly recommended!',
-    avatar: 'https://i.pravatar.cc/150?u=michael'
+    avatar: 'https://news.cornell.edu/sites/default/files/styles/breakout/public/2020-05/0521_abebegates.jpg?itok=OdW8otpB'
   }
 ];
 
@@ -99,7 +99,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Learn the essential elements that turn visitors into loyal customers.',
     date: 'March 5, 2024',
     category: 'Website Tips',
-    image: 'https://picsum.photos/seed/tips/600/400'
+    image: 'https://fastly.picsum.photos/id/39/600/400.jpg?hmac=0ww5IBEh8CZm-Ql7LdHCqTC7ef_W3sxbh-blIduySoo'
   },
   {
     id: '2',
@@ -115,14 +115,14 @@ export const PRICING: PricingPackage[] = [
   {
     id: 'starter',
     name: 'Starter Website',
-    price: '$999',
+    price: '$',
     description: 'Perfect for small businesses getting started.',
     features: ['5 pages', 'Responsive design', 'Contact form', 'Basic SEO', '1 Month Support']
   },
   {
     id: 'business',
     name: 'Business Website',
-    price: '$2,499',
+    price: '$',
     description: 'Comprehensive solution for growing companies.',
     features: ['10+ pages', 'SEO optimization', 'CMS integration', 'Blog section', '3 Months Support'],
     recommended: true
@@ -145,7 +145,7 @@ export const FAQS: FAQItem[] = [
   {
     id: '2',
     question: 'How much does a website cost?',
-    answer: 'Costs vary based on complexity. Our starter packages begin at $999, while custom enterprise solutions are quoted based on specific needs.'
+    answer: 'Costs vary based on complexity. Our starter packages begin at flexible price, while custom enterprise solutions are quoted based on specific needs.'
   },
   {
     id: '3',

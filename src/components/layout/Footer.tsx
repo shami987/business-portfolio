@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
           <div>
-            <span className="text-2xl font-bold text-white mb-6 block">NovaSoft</span>
-            <p className="text-gray-400 mb-8">
+            <span className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 block">NovaSoft</span>
+            <p className="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">
               Empowering businesses with high-performance digital solutions. We design, develop, and deploy excellence.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Facebook size={20} /></a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter size={20} /></a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
@@ -43,20 +43,20 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Newsletter</h4>
             <p className="text-gray-400 mb-4">Subscribe to get the latest digital trends and insights.</p>
-            <form className="flex gap-2">
+            <form className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Email address"
-                className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 w-full"
+                className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 w-full text-sm sm:text-base"
               />
-              <button className="bg-indigo-600 p-2 rounded-lg hover:bg-indigo-700 transition-colors">
+              <button className="bg-indigo-600 p-2 sm:p-2 rounded-lg hover:bg-indigo-700 transition-colors shrink-0">
                 <ArrowRight size={20} />
               </button>
             </form>
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/10 text-center text-gray-500 text-sm">
+        <div className="pt-8 sm:pt-10 border-t border-white/10 text-center text-gray-500 text-xs sm:text-sm">
           <p>(c) {new Date().getFullYear()} NovaSoft Digital Solutions. All rights reserved.</p>
         </div>
       </div>

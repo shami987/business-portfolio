@@ -6,23 +6,23 @@ export default function ContactPage() {
   return (
     <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">Contact Us</span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-8">Let's Build Something Great Together</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-6 sm:mb-8">Let's Build Something Great Together</h2>
 
-            <div className="space-y-8 mb-12">
+            <div className="space-y-6 sm:space-y-8 mb-10 sm:mb-12">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-indigo-600 shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Email Us</h4>
-                  <p className="text-gray-600">hello@novasoft.com</p>
+                  <p className="text-gray-600">shamicephas9@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -31,7 +31,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Call Us</h4>
-                  <p className="text-gray-600">+1 (555) 000-0000</p>
+                  <p className="text-gray-600">+250 790 850 118</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -40,12 +40,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Visit Us</h4>
-                  <p className="text-gray-600">123 Tech Avenue, Silicon Valley, CA</p>
+                  <p className="text-gray-600"></p>
                 </div>
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
                 <Facebook size={20} />
               </a>
@@ -62,7 +62,7 @@ export default function ContactPage() {
 
             <div className="mt-10">
               <a
-                href="https://wa.me/15550000000"
+                href="https://wa.me/250790850118"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-emerald-100"
@@ -76,10 +76,10 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100"
+            className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100"
           >
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form className="space-y-5 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
                   <input

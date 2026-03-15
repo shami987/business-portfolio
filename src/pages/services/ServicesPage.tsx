@@ -24,15 +24,15 @@ export default function ServicesPage() {
   return (
     <section id="services" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">What We Do</span>
-          <h2 className="text-4xl font-bold text-gray-900 mt-2">Our Specialized Services</h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Our Specialized Services</h2>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base sm:text-lg">
             We offer a wide range of digital services to help your business thrive in the modern world.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {SERVICES.map((service, index) => (
             <motion.div
               key={service.id}
@@ -40,12 +40,12 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group"
+              className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group"
             >
-              <div className="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <ServiceIcon name={service.icon} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
               <ul className="space-y-3">
                 {service.features.map((feature) => (
