@@ -5,7 +5,7 @@ import './work.styles.css';
 
 export default function WorkPage() {
   return (
-    <section id="work" className="py-24 bg-gradient-to-br from-indigo-950 via-indigo-900 to-black">
+    <section id="work" className="pt-32 pb-24 bg-gradient-to-br from-indigo-950 via-indigo-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <span className="text-indigo-500 font-bold tracking-wider uppercase text-sm">Our Work</span>

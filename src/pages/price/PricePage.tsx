@@ -6,7 +6,7 @@ import './price.styles.css';
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 bg-gray-50">
+    <section id="pricing" className="pt-32 pb-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">Pricing</span>

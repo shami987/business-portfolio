@@ -29,7 +29,7 @@ export default function ContactPage() {
     }
   };
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="pt-32 pb-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
           <motion.div
@@ -77,10 +77,10 @@ export default function ContactPage() {
               <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
+              <a href="https://www.linkedin.com/in/shami-cephas-a0472336a/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
+              <a href="https://github.com/shami987" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
                 <Github size={20} />
               </a>
             </div>
