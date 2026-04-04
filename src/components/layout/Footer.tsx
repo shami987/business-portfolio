@@ -43,14 +43,14 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Newsletter</h4>
             <p className="text-gray-400 mb-4">Subscribe to get the latest digital trends and insights.</p>
-            <form className="flex flex-col sm:flex-row gap-2">
+            <form className="flex flex-row gap-2">
               <input
                 type="email"
                 placeholder="Email address"
-                className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 w-full text-sm sm:text-base"
+                className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 outline-none focus:border-indigo-500 w-full text-sm"
               />
-              <button className="bg-indigo-600 p-2 sm:p-2 rounded-lg hover:bg-indigo-700 transition-colors shrink-0">
-                <ArrowRight size={20} />
+              <button className="bg-indigo-600 px-3 py-2 rounded-lg hover:bg-indigo-700 transition-colors shrink-0">
+                <ArrowRight size={16} />
               </button>
             </form>
           </div>

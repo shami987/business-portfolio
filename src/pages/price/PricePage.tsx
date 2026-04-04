@@ -7,7 +7,7 @@ import './price.styles.css';
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="pt-32 pb-24 bg-gray-50">
+    <section className="pt-32 pb-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">Pricing</span>
@@ -45,7 +45,7 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <div className={`w-full py-4 rounded-xl font-bold text-center ${pkg.recommended ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-900'}`}>
+                <div className={`w-full py-3 rounded-xl font-bold text-center text-sm ${pkg.recommended ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-900'}`}>
                   Get Started
                 </div>
               </motion.div>

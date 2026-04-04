@@ -10,29 +10,30 @@ const Hero = () => (
     <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-950 via-indigo-900 to-black">
       <Hero3D />
     </div>
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+    <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 text-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="max-w-3xl"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6">
+        <span className="inline-block text-indigo-300 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 sm:mb-4">Digital Agency</span>
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-3 sm:mb-5">
           Build Modern Websites for Your Business
         </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 md:mb-10">
-          We design and develop high-performance websites, web applications, and digital solutions to help businesses grow.
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 max-w-xl">
+          We design and develop high-performance websites, web apps, and digital solutions to help businesses grow.
         </p>
-        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+        <div className="flex flex-row gap-3">
           <Link
             to="/contact"
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all flex items-center justify-center gap-2"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2"
           >
-            Get a Quote <ArrowRight size={20} />
+            Get a Quote <ArrowRight size={14} />
           </Link>
           <Link
             to="/work"
-            className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all text-center"
+            className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-5 py-2.5 rounded-full text-sm font-semibold transition-all"
           >
             View Our Work
           </Link>
@@ -53,7 +54,7 @@ const stats = [
 ];
 
 const Stats = () => (
-  <section className="py-16 bg-white border-b border-gray-100">
+  <section className="py-10 sm:py-14 bg-white border-b border-gray-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map(({ icon: Icon, label, value }, i) => (
@@ -78,15 +79,15 @@ const Stats = () => (
 );
 
 const ServicesPreview = () => (
-  <section className="py-20 sm:py-24 bg-gray-50">
+  <section className="py-10 sm:py-16 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-2">
         <div>
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">What We Do</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Our Services</h2>
         </div>
-        <Link to="/services" className="text-indigo-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-          View All Services <ArrowRight size={20} />
+        <Link to="/services" className="text-indigo-600 text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+          View All Services <ArrowRight size={16} />
         </Link>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -116,15 +117,15 @@ const ServicesPreview = () => (
 );
 
 const FeaturedWork = () => (
-  <section className="py-20 sm:py-24 bg-white">
+  <section className="py-10 sm:py-16 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-2">
         <div>
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">Our Work</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Featured Projects</h2>
         </div>
-        <Link to="/work" className="text-indigo-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-          See All Projects <ArrowRight size={20} />
+        <Link to="/work" className="text-indigo-600 text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+          See All Projects <ArrowRight size={16} />
         </Link>
       </div>
       <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
@@ -162,7 +163,7 @@ const FeaturedWork = () => (
 );
 
 const Testimonials = () => (
-  <section className="py-20 sm:py-24 bg-gray-50">
+  <section className="py-10 sm:py-16 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm">Testimonials</span>
@@ -194,7 +195,7 @@ const Testimonials = () => (
 );
 
 const CTA = () => (
-  <section className="py-20 sm:py-24 bg-indigo-600 relative overflow-hidden">
+  <section className="py-10 sm:py-16 bg-indigo-600 relative overflow-hidden">
     <div className="absolute inset-0 opacity-10 pointer-events-none">
       <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
@@ -204,11 +205,11 @@ const CTA = () => (
       <p className="text-base sm:text-lg md:text-xl text-indigo-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
         Request a free consultation today and let's discuss how we can help your business grow digitally.
       </p>
-      <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-        <Link to="/contact" className="bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-indigo-50 transition-all shadow-xl">
-          Request a Free Consultation
+      <div className="flex flex-row justify-center gap-3 sm:gap-4">
+        <Link to="/contact" className="bg-white text-indigo-600 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-indigo-50 transition-all shadow-xl">
+          Free Consultation
         </Link>
-        <Link to="/pricing" className="bg-indigo-500 text-white border border-indigo-400 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-indigo-400 transition-all">
+        <Link to="/pricing" className="bg-indigo-500 text-white border border-indigo-400 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-indigo-400 transition-all">
           View Pricing
         </Link>
       </div>
