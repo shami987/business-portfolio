@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import emailjs from '@emailjs/browser';
-import { Facebook, Github, Linkedin, Mail, MapPin, MessageCircle, Phone, Twitter } from 'lucide-react';
+import { Mail, MessageCircle, Phone } from 'lucide-react';
 import './contact.styles.css';
 
 export default function ContactPage() {
@@ -59,33 +59,10 @@ export default function ContactPage() {
                   <p className="text-gray-600">+250 790 850 118</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-indigo-600 shrink-0">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900">Visit Us</h4>
-                  <p className="text-gray-600"></p>
-                </div>
-              </div>
+
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="https://www.linkedin.com/in/shami-cephas-a0472336a/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://github.com/shami987" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Github size={20} />
-              </a>
-            </div>
-
-            <div className="mt-10">
+<div className="mt-10">
               <a
                 href="https://wa.me/250790850118"
                 target="_blank"
@@ -103,7 +80,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100"
           >
-            <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
+            <form id="contact-form" className="space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>

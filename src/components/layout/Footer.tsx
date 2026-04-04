@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
           <div>
-            <img src="/images/logoo.png" alt="NovaSoft" className="h-16 w-auto mb-4 sm:mb-6" />
+            <img src="/images/logoo.png" alt="NovaSoft" className="h-16 w-auto mb-4 sm:mb-6 brightness-0 invert" />
             <p className="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">
               Empowering businesses with high-performance digital solutions. We design, develop, and deploy excellence.
             </p>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
@@ -15,37 +16,40 @@ const Pricing = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {PRICING.map((pkg, index) => (
-            <motion.div
-              key={pkg.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={`p-6 sm:p-8 rounded-3xl bg-white border relative ${pkg.recommended ? 'border-indigo-600 shadow-xl lg:scale-105 z-10' : 'border-gray-100 shadow-sm'}`}
-            >
-              {pkg.recommended && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-bold">
-                  Recommended
-                </span>
-              )}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-              <div className="flex items-baseline gap-1 mb-4">
-                <span className="text-3xl sm:text-4xl font-bold text-gray-900">{pkg.price}</span>
-                {pkg.price !== 'Custom' && <span className="text-gray-500">/project</span>}
-              </div>
-              <p className="text-gray-600 mb-8">{pkg.description}</p>
-              <ul className="space-y-4 mb-8">
-                {pkg.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 size={20} className="text-indigo-500" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <button className={`w-full py-4 rounded-xl font-bold transition-all ${pkg.recommended ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>
-                Get Started
-              </button>
-            </motion.div>
+            <Link to="/contact#contact-form" key={pkg.id}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`p-6 sm:p-8 rounded-3xl bg-white border relative cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${pkg.recommended ? 'border-indigo-600 shadow-xl lg:scale-105 z-10' : 'border-gray-100 shadow-sm'}`}
+              >
+                {pkg.recommended && (
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-bold">
+                    Recommended
+                  </span>
+                )}
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                {pkg.price && pkg.price !== 'Contact Us' && (
+                  <div className="flex items-baseline gap-1 mb-4">
+                    <span className="text-3xl sm:text-4xl font-bold text-gray-900">{pkg.price}</span>
+                    {pkg.price !== 'Custom' && <span className="text-gray-500">/project</span>}
+                  </div>
+                )}
+                <p className="text-gray-600 mb-8">{pkg.description}</p>
+                <ul className="space-y-4 mb-8">
+                  {pkg.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3 text-gray-700">
+                      <CheckCircle2 size={20} className="text-indigo-500" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className={`w-full py-4 rounded-xl font-bold text-center ${pkg.recommended ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-900'}`}>
+                  Get Started
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

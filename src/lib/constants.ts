@@ -141,14 +141,14 @@ export const PRICING: PricingPackage[] = [
   {
     id: 'starter',
     name: 'Starter Website',
-    price: '$',
+    price: 'Contact Us',
     description: 'Perfect for small businesses getting started.',
     features: ['5 pages', 'Responsive design', 'Contact form', 'Basic SEO', '1 Month Support']
   },
   {
     id: 'business',
     name: 'Business Website',
-    price: '$',
+    price: 'Contact Us',
     description: 'Comprehensive solution for growing companies.',
     features: ['10+ pages', 'SEO optimization', 'CMS integration', 'Blog section', '3 Months Support'],
     recommended: true

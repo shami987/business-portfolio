@@ -48,7 +48,7 @@ const Hero = () => (
 const stats = [
   { icon: FolderOpen, label: 'Projects Completed', value: '20+' },
   { icon: Users, label: 'Happy Clients', value: '15+' },
-  { icon: Clock, label: 'Years Experience', value: '5+' },
+  { icon: Clock, label: 'Years Experience', value: '1+' },
   { icon: Star, label: 'Client Satisfaction', value: '98%' },
 ];
 
