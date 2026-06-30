@@ -41,10 +41,9 @@ export default function AboutPage() {
           >
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://www.tek-task.com/sites/default/files/styles/marketing_slide/public/1046x616_hitech.jpg?itok=tG31DyP4"
+                src="/images/team.jpg"
                 alt="Team working"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-indigo-600 text-white p-8 rounded-2xl shadow-xl hidden lg:block">
